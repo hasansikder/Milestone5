@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        .left {
+            width: 200px;
+            height: 200px;
+            border: 2px solid pink;
+            margin-right: 5px;
+
+        }
+
+        #right {
+            width: 200px;
+            height: 200px;
+            border: 2px solid lightblue;
+        }
+
+        .main-hedder {
+            display: flex;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="main-hedder">
+            <div id="blue" class="left">
+
+            </div>
+            <div id="mybutton" class="left">
+
+            </div>
+            <div id="right">
+
+            </div>
+        </div>
+
+        <button id="gold-color"> Gold color</button>
+    </section>
+
+    <script>
+        // document.addEventListener('click', function(){
+        //     document.getElementById('left').style.backgroundColor='green';
+        // })
+        const mybuttonclick1 = document.getElementById('mybutton');
+        mybuttonclick1.onclick = thisButton
+        function thisButton() {
+            mybuttonclick1.style.backgroundColor = 'red'
+        }
+
+
+        const mybuttonclick2 = document.getElementById('right');
+        mybuttonclick2.onclick = thisButton1
+        function thisButton1() {
+            mybuttonclick2.style.backgroundColor = 'green'
+        }
+
+        const makepink = document.getElementById('right')
+        makepink.addEventListener('click', function addgreen() {
+            document.body.style.backgroundColor = 'black'
+        })
+
+        const goldColor = document.getElementById('gold-color').addEventListener('click', function () {
+            document.body.style.backgroundColor = 'gold'
+        })
+
+
+        const bluecolor = document.getElementById('blue').addEventListener('click', function () {
+            document.body.style.backgroundColor='blue'
+        })
+
+    </script>
+
+</body>
+
+</html>
